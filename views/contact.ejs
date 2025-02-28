@@ -1,0 +1,154 @@
+<%- include('./header.ejs') %>
+<!-- news div start -->
+<div class="news">
+  <marquee behavior="" direction="" scrollamount="8">
+    <span>
+      <a href="" class="scroll">
+        <b>1.</b>
+        Amission Registration 2024-2025
+      </a>
+    </span>
+    <span>
+      <a href="" class="scroll">
+        <b>2.</b>
+        Student Verification
+      </a>
+    </span>
+    <span>
+      <a href="" class="scroll">
+        <b>3.</b>
+        LOAN FACILITY IS AVAILABLE FOR ALL COURSES "Click Here"
+      </a>
+    </span>
+    <span>
+      <a href="" class="scroll">
+        <b>4.</b>
+        Virtual Job Fair
+      </a>
+    </span>
+  </marquee>
+</div>
+<!-- news div end -->
+<!-- banner image start -->
+<div class="container-fluid contact">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-7">
+      <h4 class="us">contact us...</h4>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <!--rowend-->
+</div>
+<!--container-fluid end-->
+<!-- banner image end -->
+
+<!-- contact div start -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 c">
+      <div class="row">
+        <div class="col-md-6 inrow1">
+          <center>
+            <i class="fa-solid fa-location-dot loc">
+              <h5 class="head">our main office</h5>
+              <p class="msg">561,Gandhi Nagar, Gujarat</p>
+            </i>
+          </center>
+        </div>
+        <div class="col-md-6 inrow2">
+          <center>
+            <i class="fa-solid fa-phone loc">
+              <h5 class="head">phone number</h5>
+              <p class="msg">234-9876-5455</p>
+            </i>
+          </center>
+        </div>
+        <div class="col-md-6 inrow3">
+          <center>
+            <i class="fa-solid fa-fax loc">
+              <h5 class="head">fax</h5>
+              <p class="msg">1-234-567-8900</p>
+            </i>
+          </center>
+        </div>
+        <div class="col-md-6 inrow4">
+          <center>
+            <i class="fa-solid fa-envelope loc">
+              <h5 class="head">email</h5>
+              <p class="msg">hello@gmail.com</p>
+            </i>
+          </center>
+        </div>
+      </div>
+      <!--inner row end-->
+    </div>
+
+    <div class="col-md-6 c1">
+      <h1 class="con">contact us</h1>
+      <% if(message.length>0) { %>
+      <div class="alert alert-danger">
+        <!-- to print -->
+        <%= message %>
+      </div>
+      <% } %> 
+      
+      <% if(msg.length>0) { %>
+      <div class="alert alert-success">
+        <!-- to print -->
+        <%= msg %>
+      </div>
+      <% } %>
+
+      <form action="/contactInsert" method="post">
+        <div class="mb-3">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value="<%= n %>"
+            placeholder="Enter your Name"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <input
+            type="text"
+            name="email"
+            id="email"
+            value="<%= e %>"
+            placeholder="Enter a valid email address"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="Phone number"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3">
+          <textarea
+            name="message"
+            id="message"
+            rows="4"
+            class="form-control"
+          ></textarea>
+        </div>
+        <center><button class="btn cbutton cmsg">submit</button></center>
+      </form>
+    </div>
+  </div>
+  <!--row end-->
+</div>
+<!--container end-->
+<!-- contact div end -->
+
+<%- include('./footer.ejs') %>
